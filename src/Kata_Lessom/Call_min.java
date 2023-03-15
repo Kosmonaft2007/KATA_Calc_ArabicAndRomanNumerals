@@ -1,11 +1,11 @@
-package calcRA;
+package Kata_Lessom;
 //package arabian;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
-public class Call {
+public class Call_min {
     static Scanner scanner = new Scanner(System.in);
     static int number1, number2;
     static char operation;

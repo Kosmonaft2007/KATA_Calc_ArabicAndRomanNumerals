@@ -19,17 +19,19 @@ public class CalculatorArabian {
         for (int i = 0; i < actions.length; i++) {
             if (exp.contains(actions[i])) {
                 actionIndex = i;
-                break;
+//                break;
             }
         }
         //Если не нашли арифметического действия, завершаем программу
-        //(Проверка) Если ввели не корректный символ : % № ; тогда заканчиваем return
+        //(Проверка) Если ввели не корректный символ: % № ; тогда заканчиваем return
         if (actionIndex == -1) {
-            System.out.println("Некорректное выражение");
-            return;
+//            System.out.println("Некорректное выражение");
+//            return;
+            throw new RuntimeException("Некорректное выражение");
+
         }
         //"2-4".split("-")-> {"2", "4"}
-        // Метод split принимает регулярные выражения тоэтому сосздали массив String[] regexActions = {"\\+", "-", "/", "\\*"};
+        // Метод split принимает регулярные выражения поэтому создали массив String[] regexActions = {"\\+", "-", "/", "\\*"};
         String[] data = exp.split(regexActions[actionIndex]);
         //Определяем, находятся ли числа в одном формате (оба римские или оба арабские)
         if (converter.isRoman(data[0]) == converter.isRoman(data[1])) {
