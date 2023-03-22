@@ -3,23 +3,24 @@ package Calc_AR;
 
 import java.util.Scanner;
 
-public class CalculatorArabian {
-    public static void main(String[] args) {
+class Calc_A_or_R {
+
+
+
+    public static void calc(String exp) {
+
         //2+3
         //V-VII
-        Converter converter = new Converter();
+        ConverterCalc converter = new ConverterCalc();
         String[] actions = {"+", "-", "/", "*"};
         String[] regexActions = {"\\+", "-", "/", "\\*"};
 
-        Scanner scn = new Scanner(System.in);
-        System.out.print("Введите два арабских числа от 0 до 10: [2+2] или два римских числа от I до X:[V+V] + Enter ");
-        String exp = scn.nextLine();
         //Определяем арифметическое действие:
         int actionIndex = -1;
         for (int i = 0; i < actions.length; i++) {
             if (exp.contains(actions[i])) {
                 actionIndex = i;
-//                break;
+                break;
             }
         }
         //Если не нашли арифметического действия, завершаем программу
@@ -66,7 +67,7 @@ public class CalculatorArabian {
                     break;
                 default:
                     result = a / b;
-                    // ----------добавить что на 0 делить  нельзя ретерн
+                    // ----------добавить что на 0 делить нельзя ретерн
                     break;
             }
             //15->XV
@@ -83,7 +84,6 @@ public class CalculatorArabian {
         } else {
             System.out.println("Числа должны быть в одном формате");
         }
-
 
     }
 }

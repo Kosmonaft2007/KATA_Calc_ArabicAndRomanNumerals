@@ -1,11 +1,11 @@
 package Calc_AR;
 import java.util.TreeMap;
 
-public class Converter {
+public class ConverterCalc {
     TreeMap<Character, Integer> romanKeyMap = new TreeMap<>();
     TreeMap<Integer, String> arabianKeyMap = new TreeMap<>();
 
-    public Converter() {
+    public ConverterCalc() {
         romanKeyMap.put('I', 1);
         romanKeyMap.put('V', 5);
         romanKeyMap.put('X', 10);
