@@ -1,19 +1,14 @@
 package Calc_AR;
 
-
 import java.util.Scanner;
 
 class Calc_A_or_R {
-
-
-
-    public static void calc(String exp) {
-
+    public static int arithmeticSign(String exp, String[] actions) {
         //2+3
         //V-VII
-        ConverterCalc converter = new ConverterCalc();
-        String[] actions = {"+", "-", "/", "*"};
-        String[] regexActions = {"\\+", "-", "/", "\\*"};
+//        ConverterCalc converter = new ConverterCalc();
+//        String[] actions = {"+", "-", "/", "*"};
+//        String[] regexActions = {"\\+", "-", "/", "\\*"};
 
         //Определяем арифметическое действие:
         int actionIndex = -1;
@@ -29,11 +24,20 @@ class Calc_A_or_R {
 //            System.out.println("Некорректное выражение");
 //            return;
             throw new RuntimeException("Некорректное выражение");
-
         }
+        return actionIndex;
+    }
+}
+
+class Calc {
+    public static void calc(String exp, String[] actions, String[] regexActions) {
+
+//        Calc_A_or_R.arithmeticSign();
+        ConverterCalc converter = new ConverterCalc();
         //"2-4".split("-")-> {"2", "4"}
         // Метод split принимает регулярные выражения поэтому создали массив String[] regexActions = {"\\+", "-", "/", "\\*"};
-        String[] data = exp.split(regexActions[actionIndex]);
+//        String[] data = exp.split(regexActions[actionIndex]);
+        String[] data = exp.split(regexActions[Calc_A_or_R.arithmeticSign(actionIndex)]);
         //Определяем, находятся ли числа в одном формате (оба римские или оба арабские)
         if (converter.isRoman(data[0]) == converter.isRoman(data[1])) {
             int a, b;
@@ -87,3 +91,4 @@ class Calc_A_or_R {
 
     }
 }
+
