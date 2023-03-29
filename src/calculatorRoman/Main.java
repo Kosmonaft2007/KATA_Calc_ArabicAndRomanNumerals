@@ -7,13 +7,14 @@ public class Main {
         // Ввод текста с терминала
         EnterText enterText = new EnterText();
         String str = enterText.inText();
+
         String[] actions = {"+", "-", "/", "*"};
         String[] regexActions = {"\\+", "-", "/", "\\*"};
 
 
-        int pos = Console.arithmeticSign(str, actions);
+        int read = Console.arithmeticSign(str, actions);
         String action = str.replaceAll("[^(+*/\\-)]", "");
-        String[] parts = str.split(regexActions[pos]);
+        String[] parts = str.split(regexActions[read]);
 
         for (int i = 0; i < parts.length; i++) {
             if (i > 1) {
