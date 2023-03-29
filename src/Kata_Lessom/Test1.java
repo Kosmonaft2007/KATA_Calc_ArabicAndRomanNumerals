@@ -1,7 +1,7 @@
 package Kata_Lessom;
 
 public class Test1{
-//    public static void main(String[] args) {
+    public static void main(String[] args) {
 //        int a = 5;
 //        int b = 3;
 //
@@ -24,6 +24,20 @@ public class Test1{
 //        while (matcher.find()) {
 //            System.out.println(text.substring(matcher.start(), matcher.end()));
 //        }
-//    }
 
-}
+        String[] parts = {"11","21","31"};
+
+        for(int i = 0; i < parts.length; i++)
+
+        {
+
+            if (i > 1) {
+                System.out.println("Error");
+            }
+        }System.out.println("123");
+    }
+    }
+
+
+
+

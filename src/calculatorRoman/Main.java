@@ -48,18 +48,21 @@ public class Main {
         String[] regexActions = {"\\+", "-", "/", "\\*"};
 
 
+
+        int pos = Console.arithmeticSign(str, actions);
+        String action = str.replaceAll("[^(+*/\\-)]", "");
+        String[] parts = str.split(regexActions[pos]);
+
+        for (int i = 0; i < parts.length; i++) {
+            if (i>1) {
+                throw new RuntimeException("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+            }
+        }
+
 //        System.out.println(str.matches("([\\d]{1})[+*/\\-]{1}([\\d]{1})"));
         if (!str.matches("(([123456789]{1})+[+*/\\-]{1}([\\d]{1})+)") && (!str.matches("([IXV]+[+*/\\-]{1}[IXV]+)"))) {
             throw new RuntimeException("строка не является математической операцией");
         }
-
-        System.out.println(str);
-
-        int pos = Console.arithmeticSign(str, actions);
-        String action = str.replaceAll("[^(+*/\\-)]", "");
-
-//        System.out.println(action);
-        String[] parts = str.split(regexActions[pos]);
 
 
         ConverterCalc converter = new ConverterCalc();
