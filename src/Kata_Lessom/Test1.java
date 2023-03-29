@@ -1,19 +1,29 @@
 package Kata_Lessom;
 
 public class Test1{
-    public static void main(String[] args) {
-        int a = 5;
-        int b = 3;
+//    public static void main(String[] args) {
+//        int a = 5;
+//        int b = 3;
+//
+//        int r = sum(a,b);
+//        System.out.println(r);
+//    }
+//    public static int sum (int a, int b){
+//        int summ = a+b;
+//        return res(summ);
+//    }
+//    public static int res (int s){
+//        int resss = s+s;
+//        return resss;
+//    }
 
-        int r = sum(a,b);
-        System.out.println(r);
-    }
-    public static int sum (int a, int b){
-        int summ = a+b;
-        return res(summ);
-    }
-    public static int res (int s){
-        int resss = s+s;
-        return resss;
-    }
+//    public static void main(String[] args) {
+//        String text = "Егор Алла Александр";
+//        Pattern pattern = Pattern.compile("А.+а");
+//        Matcher matcher = pattern.matcher(text);
+//        while (matcher.find()) {
+//            System.out.println(text.substring(matcher.start(), matcher.end()));
+//        }
+//    }
+
 }

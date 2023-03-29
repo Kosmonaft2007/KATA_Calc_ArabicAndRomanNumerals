@@ -20,15 +20,23 @@ public class PofiC {
 
         ConverterCalc converter = new ConverterCalc();
 
+
         //OR
         // 1 1 0 0
         // 1 0 1 0
         // 1 1 1 0
 
-        //XOR
+        //XOR исключающий ИЛИ
         // 1 1 0 0
         // 1 0 1 0
         // 0 1 1 0
+
+        // 1 XOR 0 = 1
+        // 0 XOR 1 = 1
+        // 0 XOR 0 = 0
+        // 1 XOR 1 = 0
+
+
         if (converter.isRoman(parts[0]) ^ converter.isRoman(parts[1])) {
             throw new RuntimeException("Equation parts are not valid");
         }

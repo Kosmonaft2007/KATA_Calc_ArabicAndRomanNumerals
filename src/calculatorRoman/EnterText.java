@@ -10,4 +10,5 @@ public class EnterText {
         String userInput = scn1.replaceAll("\\s+", "");
         return userInput;
     }
+
 }
