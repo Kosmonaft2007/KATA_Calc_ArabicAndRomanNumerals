@@ -45,7 +45,6 @@ public class Main {
             default -> a * b;
         };
 
-
         if (result>0) {
             converter.intToRoman(result);
         }else
