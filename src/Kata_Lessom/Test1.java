@@ -1,0 +1,19 @@
+package Kata_Lessom;
+
+public class Test1{
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 3;
+
+        int r = sum(a,b);
+        System.out.println(r);
+    }
+    public static int sum (int a, int b){
+        int summ = a+b;
+        return res(summ);
+    }
+    public static int res (int s){
+        int resss = s+s;
+        return resss;
+    }
+}

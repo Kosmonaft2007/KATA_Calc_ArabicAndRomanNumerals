@@ -1,3 +1,4 @@
+/*
 package Calc_AR;
 
 import java.util.Scanner;
@@ -5,17 +6,17 @@ import java.util.Scanner;
 class Calc_A_or_R {
     static int a, b;
 
-    public String sp(String exp, int pos, String[] regexActions) {
+    public String[] sp(String exp, int pos, String[] regexActions) {
         String[] datas = exp.split(regexActions[pos]);
-        for (String data : datas) {
-            return data;
-        }
-        return null;
+        return datas;
+//        for (String data : datas) {
+////            return data;
+//        }
+//        return null; // 2 + 3 -> 2 и 3
     }
 
 
-    public int A_or_R(String[] actions, String[] data, int pos, boolean isRos) {
-
+    public int A_or_R(String[] actions, String[] data, int pos) {
 //        Calc_A_or_R.arithmeticSign();
         ConverterCalc converter = new ConverterCalc();
 //        "2-4".split("-")-> {"2", "4"}
@@ -68,4 +69,4 @@ class Calc_A_or_R {
         }
 
     }
-}
+}*/

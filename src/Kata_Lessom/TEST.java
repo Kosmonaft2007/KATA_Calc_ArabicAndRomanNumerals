@@ -37,6 +37,5 @@ public class TEST {
         } else if (action.equals("-")) {
             System.out.println(Integer.parseInt(arr[0]) - Integer.parseInt(arr[1]));
         }
-
     }
 }
