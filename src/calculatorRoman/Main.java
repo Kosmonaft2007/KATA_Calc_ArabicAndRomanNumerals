@@ -11,13 +11,12 @@ public class Main {
         String[] regexActions = {"\\+", "-", "/", "\\*"};
 
 
-
         int pos = Console.arithmeticSign(str, actions);
         String action = str.replaceAll("[^(+*/\\-)]", "");
         String[] parts = str.split(regexActions[pos]);
 
         for (int i = 0; i < parts.length; i++) {
-            if (i>1) {
+            if (i > 1) {
                 throw new RuntimeException("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
             }
         }
@@ -42,16 +41,15 @@ public class Main {
         int result = switch (action) {
             case "+" -> a + b;
             case "-" -> a - b;
-
             case "/" -> (int) a / b;
             default -> a * b;
         };
 
-//        if (isRoman)
-//        {
-//            converter.intToRoman(result) <= 0;
-//            throw new RuntimeException("в римской системе нет отрицательных чисел");
-//        }
+
+        if (result>0) {
+            converter.intToRoman(result);
+        }else
+            throw new RuntimeException("в римской системе нет отрицательных чисел");
 
 
         System.out.println(isRoman ? converter.intToRoman(result) : result);
