@@ -21,7 +21,6 @@ public class Main {
                 throw new RuntimeException("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
             }
         }
-
 //        System.out.println(str.matches("([\\d]{1})[+*/\\-]{1}([\\d]{1})"));
         if (!str.matches("(([123456789]{1})+[+*/\\-]{1}([\\d]{1})+)") && (!str.matches("([IXV]+[+*/\\-]{1}[IXV]+)"))) {
             throw new RuntimeException("строка не является математической операцией");

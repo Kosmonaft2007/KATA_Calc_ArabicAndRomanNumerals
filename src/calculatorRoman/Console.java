@@ -2,11 +2,6 @@ package calculatorRoman;
 
 public class Console {
     public static int arithmeticSign(String exp, String[] actions) {
-        //2+3
-        //V-VII
-//        ConverterCalc converter = new ConverterCalc();
-//        String[] actions = {"+", "-", "/", "*"};
-//        String[] regexActions = {"\\+", "-", "/", "\\*"};
 
         //Определяем арифметическое действие:
         int actionIndex = -1;
