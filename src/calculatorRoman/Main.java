@@ -22,11 +22,16 @@ public class Main {
             }
         }
 //        System.out.println(str.matches("([\\d]{1})[+*/\\-]{1}([\\d]{1})"));
-        if (!str.matches("(([123456789]{1})+[+*/\\-]{1}([\\d]{1})+)") && (!str.matches("([IXV]+[+*/\\-]{1}[IXV]+)"))) {
+//        System.out.println(str);
+        if (!str.matches("(([\\d])+[+*/\\-]([\\d])+)") && (!str.matches("([IXV]+[+*/\\-][IXV]+)"))) {
             throw new RuntimeException("строка не является математической операцией");
         }
-
-
+        String nulls = "0";
+        for (String s : parts) {
+            if (s.equals(nulls)) {
+                throw new RuntimeException("null - I can't imagine ");
+            }
+        }
         ConverterCalc converter = new ConverterCalc();
 
         if (converter.isRoman(parts[0]) != converter.isRoman(parts[1])) {
@@ -45,10 +50,10 @@ public class Main {
             default -> a * b;
         };
 
-        if (result>0) {
-            converter.intToRoman(result);
-        }else
-            throw new RuntimeException("в римской системе нет отрицательных чисел");
+//        if (result>0) {
+//            converter.intToRoman(result);
+//        }else
+//            throw new RuntimeException("в римской системе нет отрицательных чисел");
 
 
         System.out.println(isRoman ? converter.intToRoman(result) : result);
